@@ -47,327 +47,617 @@
 # -- Loading entity bcd_decode_rom
 # -- Loading entity serial_uart
 # 
-vsim work.top_level
-# vsim work.top_level 
+vcom -reportprogress 300 -work work C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench_top
+# -- Compiling architecture bhv of testbench_top
+# -- Loading entity bcd_decode_rom
+vsim work.testbench_top
+# vsim work.testbench_top 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
+# Loading work.testbench_top(bhv)
 # Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-add wave -position end  sim:/top_level/clock_50
-add wave -position end  sim:/top_level/key_n
-add wave -position end  sim:/top_level/sw0
-add wave -position end  sim:/top_level/uart_rxd
-add wave -position end  sim:/top_level/uart_txd
-add wave -position end  sim:/top_level/hex0
-add wave -position end  sim:/top_level/hex1
-add wave -position end  sim:/top_level/hex2
-add wave -position end  sim:/top_level/ledg
-add wave -position end  sim:/top_level/ledr
-add wave -position end  sim:/top_level/ledgreen
-add wave -position end  sim:/top_level/ledred
-add wave -position end  sim:/top_level/received_error
-add wave -position end  sim:/top_level/transmit_ready
-add wave -position end  sim:/top_level/transmit_data_valid
-add wave -position end  sim:/top_level/transmit_data
-add wave -position end  sim:/top_level/input_vector
-add wave -position end  sim:/top_level/valid_in
-add wave -position end  sim:/top_level/reset_n
-add wave -position end  sim:/top_level/serial_uart_test_port
-add wave -position end  sim:/top_level/bcd_0_out
-add wave -position end  sim:/top_level/bcd_1_out
-add wave -position end  sim:/top_level/bcd_2_out
-add wave -position end  sim:/top_level/seven_seg_vector_0
-add wave -position end  sim:/top_level/seven_seg_vector_1
-add wave -position end  sim:/top_level/seven_seg_vector_2
-add wave -position end  sim:/top_level/valid_output
-add wave -position end  sim:/top_level/reset_n_r
-add wave -position end  sim:/top_level/reset_n_2r
-add wave -position end  sim:/top_level/sw0_r
-add wave -position end  sim:/top_level/sw0_2r
-add wave -position end  sim:/top_level/i_serial_uart/clk
-add wave -position end  sim:/top_level/i_serial_uart/reset
-add wave -position end  sim:/top_level/i_serial_uart/rx
-add wave -position end  sim:/top_level/i_serial_uart/tx
-add wave -position end  sim:/top_level/i_serial_uart/received_data
-add wave -position end  sim:/top_level/i_serial_uart/received_data_valid
-add wave -position end  sim:/top_level/i_serial_uart/received_error
-add wave -position end  sim:/top_level/i_serial_uart/received_parity_error
-add wave -position end  sim:/top_level/i_serial_uart/transmit_ready
-add wave -position end  sim:/top_level/i_serial_uart/transmit_data_valid
-add wave -position end  sim:/top_level/i_serial_uart/transmit_data
-add wave -position end  sim:/top_level/i_serial_uart/serial_uart_test_port
-add wave -position end  sim:/top_level/i_serial_uart/rx_r
-add wave -position end  sim:/top_level/i_serial_uart/rx_2r
-add wave -position end  sim:/top_level/i_serial_uart/reset_r
-add wave -position end  sim:/top_level/i_serial_uart/reset_2r
-add wave -position end  sim:/top_level/i_serial_uart/rx_state
-add wave -position end  sim:/top_level/i_serial_uart/rx_byte_int
-add wave -position end  sim:/top_level/i_serial_uart/rx_bit_no
-add wave -position end  sim:/top_level/i_serial_uart/rx_parity_toggle
-add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt
-add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_en
-add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_wrap
-add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_half
-add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt
-add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt_en
-add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt_wrap
-add wave -position end  sim:/top_level/i_serial_uart/tx_state
-add wave -position end  sim:/top_level/i_serial_uart/tx_bit_no
-add wave -position end  sim:/top_level/i_serial_uart/tx_byte_saved
-add wave -position end  sim:/top_level/i_serial_uart/tx_parity_bit
-add wave -position end  sim:/top_level/i_serial_uart/counting_state
-add wave -position end  sim:/top_level/i_serial_uart/start_bit_cnt
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-# ** Fatal: (vsim-3421) Value 1024 for start_bit_cnt is out of range 0 to 1023.
-#    Time: 20710 ns  Iteration: 0  Process: /top_level/i_serial_uart/p_detect_start_bit File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd
-# Fatal error in Process p_detect_start_bit at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd line 125
+add wave -position end  sim:/testbench_top/clock_50
+add wave -position end  sim:/testbench_top/reset_n
+add wave -position end  sim:/testbench_top/reset
+add wave -position end  sim:/testbench_top/kill_clock
+add wave -position end  sim:/testbench_top/errors_found
+add wave -position end  sim:/testbench_top/bcd_input_vector
+add wave -position end  sim:/testbench_top/bcd_valid_in
+add wave -position end  sim:/testbench_top/bcd_ready
+add wave -position end  sim:/testbench_top/bcd_0
+add wave -position end  sim:/testbench_top/bcd_1
+add wave -position end  sim:/testbench_top/bcd_2
+add wave -position end  sim:/testbench_top/bcd_0_int
+add wave -position end  sim:/testbench_top/bcd_1_int
+add wave -position end  sim:/testbench_top/bcd_2_int
+add wave -position end  sim:/testbench_top/bcd_total
+add wave -position end  sim:/testbench_top/bcd_valid_out
+add wave -position end  sim:/testbench_top/counter
+run 1 ms
+# Simulation starts.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench_top
+# ERROR - Input : 1 resulted in output : 0
+# ERROR - Input : 2 resulted in output : 1
+# ERROR - Input : 3 resulted in output : 2
+# ERROR - Input : 4 resulted in output : 3
+# ERROR - Input : 5 resulted in output : 4
+# ERROR - Input : 6 resulted in output : 5
+# ERROR - Input : 7 resulted in output : 6
+# ERROR - Input : 8 resulted in output : 7
+# ERROR - Input : 9 resulted in output : 8
+# ERROR - Input : 10 resulted in output : 9
+# ERROR - Input : 11 resulted in output : 10
+# ERROR - Input : 12 resulted in output : 11
+# ERROR - Input : 13 resulted in output : 12
+# ERROR - Input : 14 resulted in output : 13
+# ERROR - Input : 15 resulted in output : 14
+# ERROR - Input : 16 resulted in output : 15
+# ERROR - Input : 17 resulted in output : 16
+# ERROR - Input : 18 resulted in output : 17
+# ERROR - Input : 19 resulted in output : 18
+# ERROR - Input : 20 resulted in output : 19
+# ERROR - Input : 21 resulted in output : 20
+# ERROR - Input : 22 resulted in output : 21
+# ERROR - Input : 23 resulted in output : 22
+# ERROR - Input : 24 resulted in output : 23
+# ERROR - Input : 25 resulted in output : 24
+# ERROR - Input : 26 resulted in output : 25
+# ERROR - Input : 27 resulted in output : 26
+# ERROR - Input : 28 resulted in output : 27
+# ERROR - Input : 29 resulted in output : 28
+# ERROR - Input : 30 resulted in output : 29
+# ERROR - Input : 31 resulted in output : 30
+# ERROR - Input : 32 resulted in output : 31
+# ERROR - Input : 33 resulted in output : 32
+# ERROR - Input : 34 resulted in output : 33
+# ERROR - Input : 35 resulted in output : 34
+# ERROR - Input : 36 resulted in output : 35
+# ERROR - Input : 37 resulted in output : 36
+# ERROR - Input : 38 resulted in output : 37
+# ERROR - Input : 39 resulted in output : 38
+# ERROR - Input : 40 resulted in output : 39
+# ERROR - Input : 41 resulted in output : 40
+# ERROR - Input : 42 resulted in output : 41
+# ERROR - Input : 43 resulted in output : 42
+# ERROR - Input : 44 resulted in output : 43
+# ERROR - Input : 45 resulted in output : 44
+# ERROR - Input : 46 resulted in output : 45
+# ERROR - Input : 47 resulted in output : 46
+# ERROR - Input : 48 resulted in output : 47
+# ERROR - Input : 49 resulted in output : 48
+# ERROR - Input : 50 resulted in output : 49
+# ERROR - Input : 51 resulted in output : 50
+# ERROR - Input : 52 resulted in output : 51
+# ERROR - Input : 53 resulted in output : 52
+# ERROR - Input : 54 resulted in output : 53
+# ERROR - Input : 55 resulted in output : 54
+# ERROR - Input : 56 resulted in output : 55
+# ERROR - Input : 57 resulted in output : 56
+# ERROR - Input : 58 resulted in output : 57
+# ERROR - Input : 59 resulted in output : 58
+# ERROR - Input : 60 resulted in output : 59
+# ERROR - Input : 61 resulted in output : 60
+# ERROR - Input : 62 resulted in output : 61
+# ERROR - Input : 63 resulted in output : 62
+# ERROR - Input : 64 resulted in output : 63
+# ERROR - Input : 65 resulted in output : 64
+# ERROR - Input : 66 resulted in output : 65
+# ERROR - Input : 67 resulted in output : 66
+# ERROR - Input : 68 resulted in output : 67
+# ERROR - Input : 69 resulted in output : 68
+# ERROR - Input : 70 resulted in output : 69
+# ERROR - Input : 71 resulted in output : 70
+# ERROR - Input : 72 resulted in output : 71
+# ERROR - Input : 73 resulted in output : 72
+# ERROR - Input : 74 resulted in output : 73
+# ERROR - Input : 75 resulted in output : 74
+# ERROR - Input : 76 resulted in output : 75
+# ERROR - Input : 77 resulted in output : 76
+# ERROR - Input : 78 resulted in output : 77
+# ERROR - Input : 79 resulted in output : 78
+# ERROR - Input : 80 resulted in output : 79
+# ERROR - Input : 81 resulted in output : 80
+# ERROR - Input : 82 resulted in output : 81
+# ERROR - Input : 83 resulted in output : 82
+# ERROR - Input : 84 resulted in output : 83
+# ERROR - Input : 85 resulted in output : 84
+# ERROR - Input : 86 resulted in output : 85
+# ERROR - Input : 87 resulted in output : 86
+# ERROR - Input : 88 resulted in output : 87
+# ERROR - Input : 89 resulted in output : 88
+# ERROR - Input : 90 resulted in output : 89
+# ERROR - Input : 91 resulted in output : 90
+# ERROR - Input : 92 resulted in output : 91
+# ERROR - Input : 93 resulted in output : 92
+# ERROR - Input : 94 resulted in output : 93
+# ERROR - Input : 95 resulted in output : 94
+# ERROR - Input : 96 resulted in output : 95
+# ERROR - Input : 97 resulted in output : 96
+# ERROR - Input : 98 resulted in output : 97
+# ERROR - Input : 99 resulted in output : 98
+# ERROR - Input : 100 resulted in output : 99
+# ERROR - Input : 101 resulted in output : 100
+# ERROR - Input : 102 resulted in output : 101
+# ERROR - Input : 103 resulted in output : 102
+# ERROR - Input : 104 resulted in output : 103
+# ERROR - Input : 105 resulted in output : 104
+# ERROR - Input : 106 resulted in output : 105
+# ERROR - Input : 107 resulted in output : 106
+# ERROR - Input : 108 resulted in output : 107
+# ERROR - Input : 109 resulted in output : 108
+# ERROR - Input : 110 resulted in output : 109
+# ERROR - Input : 111 resulted in output : 110
+# ERROR - Input : 112 resulted in output : 111
+# ERROR - Input : 113 resulted in output : 112
+# ERROR - Input : 114 resulted in output : 113
+# ERROR - Input : 115 resulted in output : 114
+# ERROR - Input : 116 resulted in output : 115
+# ERROR - Input : 117 resulted in output : 116
+# ERROR - Input : 118 resulted in output : 117
+# ERROR - Input : 119 resulted in output : 118
+# ERROR - Input : 120 resulted in output : 119
+# ERROR - Input : 121 resulted in output : 120
+# ERROR - Input : 122 resulted in output : 121
+# ERROR - Input : 123 resulted in output : 122
+# ERROR - Input : 124 resulted in output : 123
+# ERROR - Input : 125 resulted in output : 124
+# ERROR - Input : 126 resulted in output : 125
+# ERROR - Input : 127 resulted in output : 126
+# ERROR - Input : 128 resulted in output : 127
+# ERROR - Input : 129 resulted in output : 128
+# ERROR - Input : 130 resulted in output : 129
+# ERROR - Input : 131 resulted in output : 130
+# ERROR - Input : 132 resulted in output : 131
+# ERROR - Input : 133 resulted in output : 132
+# ERROR - Input : 134 resulted in output : 133
+# ERROR - Input : 135 resulted in output : 134
+# ERROR - Input : 136 resulted in output : 135
+# ERROR - Input : 137 resulted in output : 136
+# ERROR - Input : 138 resulted in output : 137
+# ERROR - Input : 139 resulted in output : 138
+# ERROR - Input : 140 resulted in output : 139
+# ERROR - Input : 141 resulted in output : 140
+# ERROR - Input : 142 resulted in output : 141
+# ERROR - Input : 143 resulted in output : 142
+# ERROR - Input : 144 resulted in output : 143
+# ERROR - Input : 145 resulted in output : 144
+# ERROR - Input : 146 resulted in output : 145
+# ERROR - Input : 147 resulted in output : 146
+# ERROR - Input : 148 resulted in output : 147
+# ERROR - Input : 149 resulted in output : 148
+# ERROR - Input : 150 resulted in output : 149
+# ERROR - Input : 151 resulted in output : 150
+# ERROR - Input : 152 resulted in output : 151
+# ERROR - Input : 153 resulted in output : 152
+# ERROR - Input : 154 resulted in output : 153
+# ERROR - Input : 155 resulted in output : 154
+# ERROR - Input : 156 resulted in output : 155
+# ERROR - Input : 157 resulted in output : 156
+# ERROR - Input : 158 resulted in output : 157
+# ERROR - Input : 159 resulted in output : 158
+# ERROR - Input : 160 resulted in output : 159
+# ERROR - Input : 161 resulted in output : 160
+# ERROR - Input : 162 resulted in output : 161
+# ERROR - Input : 163 resulted in output : 162
+# ERROR - Input : 164 resulted in output : 163
+# ERROR - Input : 165 resulted in output : 164
+# ERROR - Input : 166 resulted in output : 165
+# ERROR - Input : 167 resulted in output : 166
+# ERROR - Input : 168 resulted in output : 167
+# ERROR - Input : 169 resulted in output : 168
+# ERROR - Input : 170 resulted in output : 169
+# ERROR - Input : 171 resulted in output : 170
+# ERROR - Input : 172 resulted in output : 171
+# ERROR - Input : 173 resulted in output : 172
+# ERROR - Input : 174 resulted in output : 173
+# ERROR - Input : 175 resulted in output : 174
+# ERROR - Input : 176 resulted in output : 175
+# ERROR - Input : 177 resulted in output : 176
+# ERROR - Input : 178 resulted in output : 177
+# ERROR - Input : 179 resulted in output : 178
+# ERROR - Input : 180 resulted in output : 179
+# ERROR - Input : 181 resulted in output : 180
+# ERROR - Input : 182 resulted in output : 181
+# ERROR - Input : 183 resulted in output : 182
+# ERROR - Input : 184 resulted in output : 183
+# ERROR - Input : 185 resulted in output : 184
+# ERROR - Input : 186 resulted in output : 185
+# ERROR - Input : 187 resulted in output : 186
+# ERROR - Input : 188 resulted in output : 187
+# ERROR - Input : 189 resulted in output : 188
+# ERROR - Input : 190 resulted in output : 189
+# ERROR - Input : 191 resulted in output : 190
+# ERROR - Input : 192 resulted in output : 191
+# ERROR - Input : 193 resulted in output : 192
+# ERROR - Input : 194 resulted in output : 193
+# ERROR - Input : 195 resulted in output : 194
+# ERROR - Input : 196 resulted in output : 195
+# ERROR - Input : 197 resulted in output : 196
+# ERROR - Input : 198 resulted in output : 197
+# ERROR - Input : 199 resulted in output : 198
+# ERROR - Input : 200 resulted in output : 199
+# ERROR - Input : 201 resulted in output : 200
+# ERROR - Input : 202 resulted in output : 201
+# ERROR - Input : 203 resulted in output : 202
+# ERROR - Input : 204 resulted in output : 203
+# ERROR - Input : 205 resulted in output : 204
+# ERROR - Input : 206 resulted in output : 205
+# ERROR - Input : 207 resulted in output : 206
+# ERROR - Input : 208 resulted in output : 207
+# ERROR - Input : 209 resulted in output : 208
+# ERROR - Input : 210 resulted in output : 209
+# ERROR - Input : 211 resulted in output : 210
+# ERROR - Input : 212 resulted in output : 211
+# ERROR - Input : 213 resulted in output : 212
+# ERROR - Input : 214 resulted in output : 213
+# ERROR - Input : 215 resulted in output : 214
+# ERROR - Input : 216 resulted in output : 215
+# ERROR - Input : 217 resulted in output : 216
+# ERROR - Input : 218 resulted in output : 217
+# ERROR - Input : 219 resulted in output : 218
+# ERROR - Input : 220 resulted in output : 219
+# ERROR - Input : 221 resulted in output : 220
+# ERROR - Input : 222 resulted in output : 221
+# ERROR - Input : 223 resulted in output : 222
+# ERROR - Input : 224 resulted in output : 223
+# ERROR - Input : 225 resulted in output : 224
+# ERROR - Input : 226 resulted in output : 225
+# ERROR - Input : 227 resulted in output : 226
+# ERROR - Input : 228 resulted in output : 227
+# ERROR - Input : 229 resulted in output : 228
+# ERROR - Input : 230 resulted in output : 229
+# ERROR - Input : 231 resulted in output : 230
+# ERROR - Input : 232 resulted in output : 231
+# ERROR - Input : 233 resulted in output : 232
+# ERROR - Input : 234 resulted in output : 233
+# ERROR - Input : 235 resulted in output : 234
+# ERROR - Input : 236 resulted in output : 235
+# ERROR - Input : 237 resulted in output : 236
+# ERROR - Input : 238 resulted in output : 237
+# ERROR - Input : 239 resulted in output : 238
+# ERROR - Input : 240 resulted in output : 239
+# ERROR - Input : 241 resulted in output : 240
+# ERROR - Input : 242 resulted in output : 241
+# ERROR - Input : 243 resulted in output : 242
+# ERROR - Input : 244 resulted in output : 243
+# ERROR - Input : 245 resulted in output : 244
+# ERROR - Input : 246 resulted in output : 245
+# ERROR - Input : 247 resulted in output : 246
+# ERROR - Input : 248 resulted in output : 247
+# ERROR - Input : 249 resulted in output : 248
+# ERROR - Input : 250 resulted in output : 249
+# ERROR - Input : 251 resulted in output : 250
+# ERROR - Input : 252 resulted in output : 251
+# ERROR - Input : 253 resulted in output : 252
+# ERROR - Input : 254 resulted in output : 253
+# ERROR - Input : 255 resulted in output : 254
+# ** Fatal: (vsim-3421) Value 256 for counter is out of range 0 to 255.
+#    Time: 15592 ns  Iteration: 0  Process: /testbench_top/p_main_test_process File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd
+# Fatal error in Process p_main_test_process at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd line 121
 # 
 # HDL call sequence:
-# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd 125 Process p_detect_start_bit
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd 121 Process p_main_test_process
 # 
-# ** Error: (vish-4008) Object 'uart_rxd' not found.
-# Error in macro ./../../run_sim.txt line 32
-# ** Error: (vish-4008) Object 'uart_rxd' not found.
+restart -f
+run 1 ms
+# Simulation starts.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench_top
+# ERROR - Input : 1 resulted in output : 0
+# ERROR - Input : 2 resulted in output : 1
+# ERROR - Input : 3 resulted in output : 2
+# ERROR - Input : 4 resulted in output : 3
+# ERROR - Input : 5 resulted in output : 4
+# ERROR - Input : 6 resulted in output : 5
+# ERROR - Input : 7 resulted in output : 6
+# ERROR - Input : 8 resulted in output : 7
+# ERROR - Input : 9 resulted in output : 8
+# ERROR - Input : 10 resulted in output : 9
+# ERROR - Input : 11 resulted in output : 10
+# ERROR - Input : 12 resulted in output : 11
+# ERROR - Input : 13 resulted in output : 12
+# ERROR - Input : 14 resulted in output : 13
+# ERROR - Input : 15 resulted in output : 14
+# ERROR - Input : 16 resulted in output : 15
+# ERROR - Input : 17 resulted in output : 16
+# ERROR - Input : 18 resulted in output : 17
+# ERROR - Input : 19 resulted in output : 18
+# ERROR - Input : 20 resulted in output : 19
+# ERROR - Input : 21 resulted in output : 20
+# ERROR - Input : 22 resulted in output : 21
+# ERROR - Input : 23 resulted in output : 22
+# ERROR - Input : 24 resulted in output : 23
+# ERROR - Input : 25 resulted in output : 24
+# ERROR - Input : 26 resulted in output : 25
+# ERROR - Input : 27 resulted in output : 26
+# ERROR - Input : 28 resulted in output : 27
+# ERROR - Input : 29 resulted in output : 28
+# ERROR - Input : 30 resulted in output : 29
+# ERROR - Input : 31 resulted in output : 30
+# ERROR - Input : 32 resulted in output : 31
+# ERROR - Input : 33 resulted in output : 32
+# ERROR - Input : 34 resulted in output : 33
+# ERROR - Input : 35 resulted in output : 34
+# ERROR - Input : 36 resulted in output : 35
+# ERROR - Input : 37 resulted in output : 36
+# ERROR - Input : 38 resulted in output : 37
+# ERROR - Input : 39 resulted in output : 38
+# ERROR - Input : 40 resulted in output : 39
+# ERROR - Input : 41 resulted in output : 40
+# ERROR - Input : 42 resulted in output : 41
+# ERROR - Input : 43 resulted in output : 42
+# ERROR - Input : 44 resulted in output : 43
+# ERROR - Input : 45 resulted in output : 44
+# ERROR - Input : 46 resulted in output : 45
+# ERROR - Input : 47 resulted in output : 46
+# ERROR - Input : 48 resulted in output : 47
+# ERROR - Input : 49 resulted in output : 48
+# ERROR - Input : 50 resulted in output : 49
+# ERROR - Input : 51 resulted in output : 50
+# ERROR - Input : 52 resulted in output : 51
+# ERROR - Input : 53 resulted in output : 52
+# ERROR - Input : 54 resulted in output : 53
+# ERROR - Input : 55 resulted in output : 54
+# ERROR - Input : 56 resulted in output : 55
+# ERROR - Input : 57 resulted in output : 56
+# ERROR - Input : 58 resulted in output : 57
+# ERROR - Input : 59 resulted in output : 58
+# ERROR - Input : 60 resulted in output : 59
+# ERROR - Input : 61 resulted in output : 60
+# ERROR - Input : 62 resulted in output : 61
+# ERROR - Input : 63 resulted in output : 62
+# ERROR - Input : 64 resulted in output : 63
+# ERROR - Input : 65 resulted in output : 64
+# ERROR - Input : 66 resulted in output : 65
+# ERROR - Input : 67 resulted in output : 66
+# ERROR - Input : 68 resulted in output : 67
+# ERROR - Input : 69 resulted in output : 68
+# ERROR - Input : 70 resulted in output : 69
+# ERROR - Input : 71 resulted in output : 70
+# ERROR - Input : 72 resulted in output : 71
+# ERROR - Input : 73 resulted in output : 72
+# ERROR - Input : 74 resulted in output : 73
+# ERROR - Input : 75 resulted in output : 74
+# ERROR - Input : 76 resulted in output : 75
+# ERROR - Input : 77 resulted in output : 76
+# ERROR - Input : 78 resulted in output : 77
+# ERROR - Input : 79 resulted in output : 78
+# ERROR - Input : 80 resulted in output : 79
+# ERROR - Input : 81 resulted in output : 80
+# ERROR - Input : 82 resulted in output : 81
+# ERROR - Input : 83 resulted in output : 82
+# ERROR - Input : 84 resulted in output : 83
+# ERROR - Input : 85 resulted in output : 84
+# ERROR - Input : 86 resulted in output : 85
+# ERROR - Input : 87 resulted in output : 86
+# ERROR - Input : 88 resulted in output : 87
+# ERROR - Input : 89 resulted in output : 88
+# ERROR - Input : 90 resulted in output : 89
+# ERROR - Input : 91 resulted in output : 90
+# ERROR - Input : 92 resulted in output : 91
+# ERROR - Input : 93 resulted in output : 92
+# ERROR - Input : 94 resulted in output : 93
+# ERROR - Input : 95 resulted in output : 94
+# ERROR - Input : 96 resulted in output : 95
+# ERROR - Input : 97 resulted in output : 96
+# ERROR - Input : 98 resulted in output : 97
+# ERROR - Input : 99 resulted in output : 98
+# ERROR - Input : 100 resulted in output : 99
+# ERROR - Input : 101 resulted in output : 100
+# ERROR - Input : 102 resulted in output : 101
+# ERROR - Input : 103 resulted in output : 102
+# ERROR - Input : 104 resulted in output : 103
+# ERROR - Input : 105 resulted in output : 104
+# ERROR - Input : 106 resulted in output : 105
+# ERROR - Input : 107 resulted in output : 106
+# ERROR - Input : 108 resulted in output : 107
+# ERROR - Input : 109 resulted in output : 108
+# ERROR - Input : 110 resulted in output : 109
+# ERROR - Input : 111 resulted in output : 110
+# ERROR - Input : 112 resulted in output : 111
+# ERROR - Input : 113 resulted in output : 112
+# ERROR - Input : 114 resulted in output : 113
+# ERROR - Input : 115 resulted in output : 114
+# ERROR - Input : 116 resulted in output : 115
+# ERROR - Input : 117 resulted in output : 116
+# ERROR - Input : 118 resulted in output : 117
+# ERROR - Input : 119 resulted in output : 118
+# ERROR - Input : 120 resulted in output : 119
+# ERROR - Input : 121 resulted in output : 120
+# ERROR - Input : 122 resulted in output : 121
+# ERROR - Input : 123 resulted in output : 122
+# ERROR - Input : 124 resulted in output : 123
+# ERROR - Input : 125 resulted in output : 124
+# ERROR - Input : 126 resulted in output : 125
+# ERROR - Input : 127 resulted in output : 126
+# ERROR - Input : 128 resulted in output : 127
+# ERROR - Input : 129 resulted in output : 128
+# ERROR - Input : 130 resulted in output : 129
+# ERROR - Input : 131 resulted in output : 130
+# ERROR - Input : 132 resulted in output : 131
+# ERROR - Input : 133 resulted in output : 132
+# ERROR - Input : 134 resulted in output : 133
+# ERROR - Input : 135 resulted in output : 134
+# ERROR - Input : 136 resulted in output : 135
+# ERROR - Input : 137 resulted in output : 136
+# ERROR - Input : 138 resulted in output : 137
+# ERROR - Input : 139 resulted in output : 138
+# ERROR - Input : 140 resulted in output : 139
+# ERROR - Input : 141 resulted in output : 140
+# ERROR - Input : 142 resulted in output : 141
+# ERROR - Input : 143 resulted in output : 142
+# ERROR - Input : 144 resulted in output : 143
+# ERROR - Input : 145 resulted in output : 144
+# ERROR - Input : 146 resulted in output : 145
+# ERROR - Input : 147 resulted in output : 146
+# ERROR - Input : 148 resulted in output : 147
+# ERROR - Input : 149 resulted in output : 148
+# ERROR - Input : 150 resulted in output : 149
+# ERROR - Input : 151 resulted in output : 150
+# ERROR - Input : 152 resulted in output : 151
+# ERROR - Input : 153 resulted in output : 152
+# ERROR - Input : 154 resulted in output : 153
+# ERROR - Input : 155 resulted in output : 154
+# ERROR - Input : 156 resulted in output : 155
+# ERROR - Input : 157 resulted in output : 156
+# ERROR - Input : 158 resulted in output : 157
+# ERROR - Input : 159 resulted in output : 158
+# ERROR - Input : 160 resulted in output : 159
+# ERROR - Input : 161 resulted in output : 160
+# ERROR - Input : 162 resulted in output : 161
+# ERROR - Input : 163 resulted in output : 162
+# ERROR - Input : 164 resulted in output : 163
+# ERROR - Input : 165 resulted in output : 164
+# ERROR - Input : 166 resulted in output : 165
+# ERROR - Input : 167 resulted in output : 166
+# ERROR - Input : 168 resulted in output : 167
+# ERROR - Input : 169 resulted in output : 168
+# ERROR - Input : 170 resulted in output : 169
+# ERROR - Input : 171 resulted in output : 170
+# ERROR - Input : 172 resulted in output : 171
+# ERROR - Input : 173 resulted in output : 172
+# ERROR - Input : 174 resulted in output : 173
+# ERROR - Input : 175 resulted in output : 174
+# ERROR - Input : 176 resulted in output : 175
+# ERROR - Input : 177 resulted in output : 176
+# ERROR - Input : 178 resulted in output : 177
+# ERROR - Input : 179 resulted in output : 178
+# ERROR - Input : 180 resulted in output : 179
+# ERROR - Input : 181 resulted in output : 180
+# ERROR - Input : 182 resulted in output : 181
+# ERROR - Input : 183 resulted in output : 182
+# ERROR - Input : 184 resulted in output : 183
+# ERROR - Input : 185 resulted in output : 184
+# ERROR - Input : 186 resulted in output : 185
+# ERROR - Input : 187 resulted in output : 186
+# ERROR - Input : 188 resulted in output : 187
+# ERROR - Input : 189 resulted in output : 188
+# ERROR - Input : 190 resulted in output : 189
+# ERROR - Input : 191 resulted in output : 190
+# ERROR - Input : 192 resulted in output : 191
+# ERROR - Input : 193 resulted in output : 192
+# ERROR - Input : 194 resulted in output : 193
+# ERROR - Input : 195 resulted in output : 194
+# ERROR - Input : 196 resulted in output : 195
+# ERROR - Input : 197 resulted in output : 196
+# ERROR - Input : 198 resulted in output : 197
+# ERROR - Input : 199 resulted in output : 198
+# ERROR - Input : 200 resulted in output : 199
+# ERROR - Input : 201 resulted in output : 200
+# ERROR - Input : 202 resulted in output : 201
+# ERROR - Input : 203 resulted in output : 202
+# ERROR - Input : 204 resulted in output : 203
+# ERROR - Input : 205 resulted in output : 204
+# ERROR - Input : 206 resulted in output : 205
+# ERROR - Input : 207 resulted in output : 206
+# ERROR - Input : 208 resulted in output : 207
+# ERROR - Input : 209 resulted in output : 208
+# ERROR - Input : 210 resulted in output : 209
+# ERROR - Input : 211 resulted in output : 210
+# ERROR - Input : 212 resulted in output : 211
+# ERROR - Input : 213 resulted in output : 212
+# ERROR - Input : 214 resulted in output : 213
+# ERROR - Input : 215 resulted in output : 214
+# ERROR - Input : 216 resulted in output : 215
+# ERROR - Input : 217 resulted in output : 216
+# ERROR - Input : 218 resulted in output : 217
+# ERROR - Input : 219 resulted in output : 218
+# ERROR - Input : 220 resulted in output : 219
+# ERROR - Input : 221 resulted in output : 220
+# ERROR - Input : 222 resulted in output : 221
+# ERROR - Input : 223 resulted in output : 222
+# ERROR - Input : 224 resulted in output : 223
+# ERROR - Input : 225 resulted in output : 224
+# ERROR - Input : 226 resulted in output : 225
+# ERROR - Input : 227 resulted in output : 226
+# ERROR - Input : 228 resulted in output : 227
+# ERROR - Input : 229 resulted in output : 228
+# ERROR - Input : 230 resulted in output : 229
+# ERROR - Input : 231 resulted in output : 230
+# ERROR - Input : 232 resulted in output : 231
+# ERROR - Input : 233 resulted in output : 232
+# ERROR - Input : 234 resulted in output : 233
+# ERROR - Input : 235 resulted in output : 234
+# ERROR - Input : 236 resulted in output : 235
+# ERROR - Input : 237 resulted in output : 236
+# ERROR - Input : 238 resulted in output : 237
+# ERROR - Input : 239 resulted in output : 238
+# ERROR - Input : 240 resulted in output : 239
+# ERROR - Input : 241 resulted in output : 240
+# ERROR - Input : 242 resulted in output : 241
+# ERROR - Input : 243 resulted in output : 242
+# ERROR - Input : 244 resulted in output : 243
+# ERROR - Input : 245 resulted in output : 244
+# ERROR - Input : 246 resulted in output : 245
+# ERROR - Input : 247 resulted in output : 246
+# ERROR - Input : 248 resulted in output : 247
+# ERROR - Input : 249 resulted in output : 248
+# ERROR - Input : 250 resulted in output : 249
+# ERROR - Input : 251 resulted in output : 250
+# ERROR - Input : 252 resulted in output : 251
+# ERROR - Input : 253 resulted in output : 252
+# ERROR - Input : 254 resulted in output : 253
+# ERROR - Input : 255 resulted in output : 254
+# ** Fatal: (vsim-3421) Value 256 for counter is out of range 0 to 255.
+#    Time: 15592 ns  Iteration: 0  Process: /testbench_top/p_main_test_process File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd
+# Fatal error in Process p_main_test_process at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd line 121
 # 
-#     while executing
-# "force uart_rxd 0"
-do ../../run_sim.txt
+# HDL call sequence:
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd 121 Process p_main_test_process
+# 
+vcom -reportprogress 300 -work work C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
+# -- Compiling entity testbench_top
+# -- Compiling architecture bhv of testbench_top
+# ** Error: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd(107): near "0": expecting IN
+# ** Error: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd(121): near "loop": expecting PROCESS
+# ** Error: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd(131): near "process": expecting ';'
+vcom -reportprogress 300 -work work C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/testbench_top.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
+# -- Compiling entity testbench_top
+# -- Compiling architecture bhv of testbench_top
 # -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
-# WARNING: No extended dataflow license exists
-add wave -position end  sim:/top_level/i_bcd_decode_rom/clk
-add wave -position end  sim:/top_level/i_bcd_decode_rom/reset
-add wave -position end  sim:/top_level/i_bcd_decode_rom/input_vector
-add wave -position end  sim:/top_level/i_bcd_decode_rom/valid_in
-add wave -position end  sim:/top_level/i_bcd_decode_rom/ready
-add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_0
-add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_1
-add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_2
-add wave -position end  sim:/top_level/i_bcd_decode_rom/valid_out
-add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_addr
-add wave -position end  sim:/top_level/i_bcd_decode_rom/addr_valid
-add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_rom
-add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_data
-add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_data_valid
-do ../../run_sim.txt
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package seven_seg_pkg
-# -- Compiling package body seven_seg_pkg
-# -- Loading package seven_seg_pkg
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity serial_uart
-# -- Compiling architecture rtl of serial_uart
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity bcd_decode_rom
-# -- Compiling architecture rtl of bcd_decode_rom
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package seven_seg_pkg
-# -- Compiling entity top_level
-# -- Compiling architecture rtl of top_level
-# -- Loading entity bcd_decode_rom
-# -- Loading entity serial_uart
-# Loading work.seven_seg_pkg(body)
-# Loading work.top_level(rtl)
-# Loading work.bcd_decode_rom(rtl)
-# Loading work.serial_uart(rtl)
+restart -f
+# Loading work.testbench_top(bhv)
+run 1 ms
+# Simulation starts.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench_top
+# Simulation finished. Total number of errors detected : 0
+# Testbench ends...
+run -all

@@ -104,7 +104,7 @@ begin
       -- wait for clock signal to go high
       wait until clock_50 = '1';
       
-      while counter <= 256 loop
+      for counter in 0 to 255 loop
          bcd_input_vector        <= std_logic_vector(to_unsigned(counter,bcd_input_vector'length));
          wait until clock_50 = '1';
          bcd_valid_in            <= '1';
@@ -113,8 +113,8 @@ begin
          while bcd_valid_out /= '1' loop
             wait for 1 ns;
          end loop;
-         if bcd_total /= 123 then
-            pr_write("ERROR - Input : " & integer'image(123) & " resulted in output : " & integer'image(bcd_total));
+         if bcd_total /= counter then
+            pr_write("ERROR - Input : " & integer'image(counter) & " resulted in output : " & integer'image(bcd_total));
             errors_found            <= errors_found + 1;
          end if;
          wait for 1 ns;
