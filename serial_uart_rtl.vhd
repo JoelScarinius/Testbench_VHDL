@@ -1,6 +1,6 @@
 library ieee;
    use ieee.std_logic_1164.all;
-
+   use ieee.numeric_std.all;
 --=================================================================
 --
 -- Serial UART
@@ -31,9 +31,10 @@ entity serial_uart is
 
       transmit_ready          : out std_logic;  -- Set high when ready for data
       transmit_data_valid     : in  std_logic;  -- transmit_data is valid
-      transmit_data           : in  std_logic_vector(7 downto 0));   -- Byte to transmit
+      transmit_data           : in  std_logic_vector(7 downto 0);   -- Byte to transmit
 
-      serial_uart_test_port   : out std_logic_vector(11 downto 0));   -- Test port
+      serial_uart_test_port   : out std_logic_vector(11 downto 0) -- Test port
+      );
 end entity serial_uart;
 
 architecture rtl of serial_uart is
@@ -48,11 +49,13 @@ architecture rtl of serial_uart is
                         s_tx_data,
                         s_parity,
                         s_stop_bit);
+   type t_counting_state is ( s_not_counting,
+                              s_counting);
 
    -- constants
-   constant c_bit_cnt_max          : natural := (10**9)/(g_clk_period_ns*g_serial_speed_bps) - 1;
-   constant c_half_bit_cnt_max     : natural := c_bit_cnt_max/2;
-   constant c_clock_50_counter_max : natural := 1023;
+   constant c_bit_cnt_max        : natural := (10**9)/(g_clk_period_ns*g_serial_speed_bps) - 1;
+   constant c_half_bit_cnt_max   : natural := c_bit_cnt_max/2;
+   constant c_start_bit_cnt_max  : natural := 1023;
 
    -- double synchronize rx_data
    signal rx_r                   : std_logic;
@@ -74,13 +77,16 @@ architecture rtl of serial_uart is
    signal tx_bit_cnt             : natural range 0 to c_bit_cnt_max;
    signal tx_bit_cnt_en          : std_logic;
    signal tx_bit_cnt_wrap        : std_logic;
-   signal clock_50_counter       : natural range 0 to c_clock_50_counter_max := 0;
-
+   
    -- Signals for p_tx_data process
    signal tx_state               : t_tx_state;
    signal tx_bit_no              : natural range 0 to 7;
    signal tx_byte_saved          : std_logic_vector(7 downto 0);
    signal tx_parity_bit          : std_logic;
+   
+   -- Signals for p_detect_start_bit process
+   signal counting_state         : t_counting_state;
+   signal start_bit_cnt          : natural range 0 to c_start_bit_cnt_max := 0;
 
 begin
 
@@ -96,26 +102,42 @@ begin
          reset_2r    <= reset_r;
       end if;
    end process p_double_sync;
-
+   
    p_detect_start_bit : process(clk, reset_2r)
    begin
       if (reset_2r = '0') then
-         clock_50_counter <= 0;
+         counting_state <= s_not_counting;
       elsif rising_edge(clk) then
-         if (tx_state = s_start_bit) then
-            if (bit_cnt = c_bit_cnt_max) then -- ??
-               -- ?? Logical level??
-               -- något
-               -- increment clock_50_counter
-               clock_50_counter <= clock_50_counter + 1;
-               -- reset clock_50_counter when it reaches c_clock_50_counter_max
-               if (clock_50_counter = c_clock_50_counter_max) then
-                  -- when finished counting, output this value to serial_uart_test_port
-                  serial_uart_test_port(11 downto 0) <= std_logic_vector(to_unsigned(clock_50_counter, 12));
-                  clock_50_counter <= 0;
+
+         case counting_state is
+
+            when s_not_counting =>
+               start_bit_cnt <= 0;
+               if (rx_state = s_idle) then
+                  counting_state <= s_counting;
                end if;
-            end if;
-         end if;
+
+            when s_counting =>
+               if (rx_2r = '0') then
+                     start_bit_cnt <= start_bit_cnt + 1;
+               else 
+                  -- when finished counting, output this value to serial_uart_test_port
+                  serial_uart_test_port(11 downto 0) <= std_logic_vector(to_unsigned(start_bit_cnt, 12));
+                  counting_state <= s_not_counting;
+               end if;
+         end case;
+
+         -- if ((rx_state = s_idle) and (rx_2r = '0')) then
+         --    -- increment start_bit_cnt
+         --    start_bit_cnt <= start_bit_cnt + 1;
+         --    -- reset start_bit_cnt when it reaches c_start_bit_cnt_max
+         --    if (start_bit_cnt = c_start_bit_cnt_max) then
+         --       start_bit_cnt <= 0;
+         --    end if;
+         -- else
+         --    -- when finished counting, output this value to serial_uart_test_port
+         --    serial_uart_test_port(11 downto 0) <= std_logic_vector(to_unsigned(start_bit_cnt*2, 12));
+         -- end if;
       end if;
    end process p_detect_start_bit;
 

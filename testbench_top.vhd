@@ -8,6 +8,8 @@ entity testbench_top is
 end entity testbench_top;
 
 architecture bhv of testbench_top is
+   -- Constants
+   constant c_natural_counter_max : integer := 255;
 
    -- Clock and reset generation
    signal clock_50     : std_logic := '0';
@@ -28,6 +30,8 @@ architecture bhv of testbench_top is
    signal bcd_2_int        : integer range 0 to 15;
    signal bcd_total        : integer;
    signal bcd_valid_out    : std_logic;
+
+   signal counter          : integer range 0 to c_natural_counter_max;
 
    procedure pr_write(v_input_str : in string) is
       variable v_line : line;
@@ -99,25 +103,22 @@ begin
       wait for 100 ns;
       -- wait for clock signal to go high
       wait until clock_50 = '1';
-
-      -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      -- !!! CHANGE BELOW TO TEST ALL VALUES OF INPUT VECTOR, use a loop maybe? !!!
-      -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      -- set value 123 to bcd input vector
-      bcd_input_vector        <= std_logic_vector(to_unsigned(123,bcd_input_vector'length));
-      wait until clock_50 = '1';
-      bcd_valid_in            <= '1';
-      wait until clock_50 = '1';
-      bcd_valid_in            <= '0';
-      while bcd_valid_out /= '1' loop
+      
+      while counter <= 256 loop
+         bcd_input_vector        <= std_logic_vector(to_unsigned(counter,bcd_input_vector'length));
+         wait until clock_50 = '1';
+         bcd_valid_in            <= '1';
+         wait until clock_50 = '1';
+         bcd_valid_in            <= '0';
+         while bcd_valid_out /= '1' loop
+            wait for 1 ns;
+         end loop;
+         if bcd_total /= 123 then
+            pr_write("ERROR - Input : " & integer'image(123) & " resulted in output : " & integer'image(bcd_total));
+            errors_found            <= errors_found + 1;
+         end if;
          wait for 1 ns;
       end loop;
-      if bcd_total /= 123 then
-         pr_write("ERROR - Input : " & integer'image(123) & " resulted in output : " & integer'image(bcd_total));
-         errors_found            <= errors_found + 1;
-      end if;
       wait until bcd_valid_out = '0';
 
 

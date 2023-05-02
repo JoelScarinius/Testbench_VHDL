@@ -19,19 +19,19 @@ package seven_seg_pkg is
     );
 
     -- Declare functions
-    function natural_to_7seg(
-        4_bits : in std_logic_vector(3 downto 0))
+    function bcd_to_7seg(
+        bcd_bits : in std_logic_vector(3 downto 0))
         return std_logic_vector;
 end package seven_seg_pkg;
 package body seven_seg_pkg is
     -- Package body
-    function natural_to_7seg(
-        4_bits : in std_logic_vector(3 downto 0))
+    function bcd_to_7seg(
+        bcd_bits : in std_logic_vector(3 downto 0))
         return std_logic_vector is
         variable v_return_vector : std_logic_vector(6 downto 0);
         variable v_4_bits_as_natural : natural range 0 to 9;
     begin
-        v_4_bits_as_natural := to_integer(unsigned(4_bits));
+        v_4_bits_as_natural := to_integer(unsigned(bcd_bits));
 
         case v_4_bits_as_natural is
             when 0 =>
@@ -58,5 +58,5 @@ package body seven_seg_pkg is
                 v_return_vector := "1111111";
         end case;
         return v_return_vector;
-    end function natural_to_7seg;
+    end function bcd_to_7seg;
 end package body seven_seg_pkg;

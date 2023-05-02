@@ -1,0 +1,373 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do top_level_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/seven_seg_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/bcd_decode_rom_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# vcom -93 -work work {C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# 
+vsim work.top_level
+# vsim work.top_level 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+add wave -position end  sim:/top_level/clock_50
+add wave -position end  sim:/top_level/key_n
+add wave -position end  sim:/top_level/sw0
+add wave -position end  sim:/top_level/uart_rxd
+add wave -position end  sim:/top_level/uart_txd
+add wave -position end  sim:/top_level/hex0
+add wave -position end  sim:/top_level/hex1
+add wave -position end  sim:/top_level/hex2
+add wave -position end  sim:/top_level/ledg
+add wave -position end  sim:/top_level/ledr
+add wave -position end  sim:/top_level/ledgreen
+add wave -position end  sim:/top_level/ledred
+add wave -position end  sim:/top_level/received_error
+add wave -position end  sim:/top_level/transmit_ready
+add wave -position end  sim:/top_level/transmit_data_valid
+add wave -position end  sim:/top_level/transmit_data
+add wave -position end  sim:/top_level/input_vector
+add wave -position end  sim:/top_level/valid_in
+add wave -position end  sim:/top_level/reset_n
+add wave -position end  sim:/top_level/serial_uart_test_port
+add wave -position end  sim:/top_level/bcd_0_out
+add wave -position end  sim:/top_level/bcd_1_out
+add wave -position end  sim:/top_level/bcd_2_out
+add wave -position end  sim:/top_level/seven_seg_vector_0
+add wave -position end  sim:/top_level/seven_seg_vector_1
+add wave -position end  sim:/top_level/seven_seg_vector_2
+add wave -position end  sim:/top_level/valid_output
+add wave -position end  sim:/top_level/reset_n_r
+add wave -position end  sim:/top_level/reset_n_2r
+add wave -position end  sim:/top_level/sw0_r
+add wave -position end  sim:/top_level/sw0_2r
+add wave -position end  sim:/top_level/i_serial_uart/clk
+add wave -position end  sim:/top_level/i_serial_uart/reset
+add wave -position end  sim:/top_level/i_serial_uart/rx
+add wave -position end  sim:/top_level/i_serial_uart/tx
+add wave -position end  sim:/top_level/i_serial_uart/received_data
+add wave -position end  sim:/top_level/i_serial_uart/received_data_valid
+add wave -position end  sim:/top_level/i_serial_uart/received_error
+add wave -position end  sim:/top_level/i_serial_uart/received_parity_error
+add wave -position end  sim:/top_level/i_serial_uart/transmit_ready
+add wave -position end  sim:/top_level/i_serial_uart/transmit_data_valid
+add wave -position end  sim:/top_level/i_serial_uart/transmit_data
+add wave -position end  sim:/top_level/i_serial_uart/serial_uart_test_port
+add wave -position end  sim:/top_level/i_serial_uart/rx_r
+add wave -position end  sim:/top_level/i_serial_uart/rx_2r
+add wave -position end  sim:/top_level/i_serial_uart/reset_r
+add wave -position end  sim:/top_level/i_serial_uart/reset_2r
+add wave -position end  sim:/top_level/i_serial_uart/rx_state
+add wave -position end  sim:/top_level/i_serial_uart/rx_byte_int
+add wave -position end  sim:/top_level/i_serial_uart/rx_bit_no
+add wave -position end  sim:/top_level/i_serial_uart/rx_parity_toggle
+add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt
+add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_en
+add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_wrap
+add wave -position end  sim:/top_level/i_serial_uart/rx_bit_cnt_half
+add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt
+add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt_en
+add wave -position end  sim:/top_level/i_serial_uart/tx_bit_cnt_wrap
+add wave -position end  sim:/top_level/i_serial_uart/tx_state
+add wave -position end  sim:/top_level/i_serial_uart/tx_bit_no
+add wave -position end  sim:/top_level/i_serial_uart/tx_byte_saved
+add wave -position end  sim:/top_level/i_serial_uart/tx_parity_bit
+add wave -position end  sim:/top_level/i_serial_uart/counting_state
+add wave -position end  sim:/top_level/i_serial_uart/start_bit_cnt
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+# ** Fatal: (vsim-3421) Value 1024 for start_bit_cnt is out of range 0 to 1023.
+#    Time: 20710 ns  Iteration: 0  Process: /top_level/i_serial_uart/p_detect_start_bit File: C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd
+# Fatal error in Process p_detect_start_bit at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd line 125
+# 
+# HDL call sequence:
+# Stopped at C:/Users/Joel-/Desktop/Civ_Data/Digital_Electronics/VHDL/Labbar/Lab6/serial_uart_rtl.vhd 125 Process p_detect_start_bit
+# 
+# ** Error: (vish-4008) Object 'uart_rxd' not found.
+# Error in macro ./../../run_sim.txt line 32
+# ** Error: (vish-4008) Object 'uart_rxd' not found.
+# 
+#     while executing
+# "force uart_rxd 0"
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
+# WARNING: No extended dataflow license exists
+add wave -position end  sim:/top_level/i_bcd_decode_rom/clk
+add wave -position end  sim:/top_level/i_bcd_decode_rom/reset
+add wave -position end  sim:/top_level/i_bcd_decode_rom/input_vector
+add wave -position end  sim:/top_level/i_bcd_decode_rom/valid_in
+add wave -position end  sim:/top_level/i_bcd_decode_rom/ready
+add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_0
+add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_1
+add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_2
+add wave -position end  sim:/top_level/i_bcd_decode_rom/valid_out
+add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_addr
+add wave -position end  sim:/top_level/i_bcd_decode_rom/addr_valid
+add wave -position end  sim:/top_level/i_bcd_decode_rom/bcd_rom
+add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_data
+add wave -position end  sim:/top_level/i_bcd_decode_rom/rom_data_valid
+do ../../run_sim.txt
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity bcd_decode_rom
+# -- Loading entity serial_uart
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.bcd_decode_rom(rtl)
+# Loading work.serial_uart(rtl)
