@@ -10,24 +10,24 @@ end entity testbench_top;
 architecture bhv of testbench_top is
 
    -- Clock and reset generation
-   signal clock_50         : std_logic := '0';
-   signal reset_n          : std_logic := '0';  -- Active low reset
-   signal reset            : std_logic := '1';  -- Active high reset
-   signal kill_clock       : std_logic := '0';
-   signal errors_found     : integer;
+   signal clock_50     : std_logic := '0';
+   signal reset_n      : std_logic := '0';  -- Active low reset
+   signal reset        : std_logic := '1';  -- Active high reset
+   signal kill_clock   : std_logic := '0';
+   signal errors_found : integer;
 
-     -- Output signals to / from DUT
-   signal bcd_input_vector          : std_logic_vector(7 downto 0);
-   signal bcd_valid_in              : std_logic;
-   signal bcd_ready                 : std_logic;
-   signal bcd_0                     : std_logic_vector(3 downto 0);
-   signal bcd_1                     : std_logic_vector(3 downto 0);
-   signal bcd_2                     : std_logic_vector(3 downto 0);
-   signal bcd_0_int                 : integer range 0 to 15;
-   signal bcd_1_int                 : integer range 0 to 15;
-   signal bcd_2_int                 : integer range 0 to 15;
-   signal bcd_total                 : integer;
-   signal bcd_valid_out             : std_logic;
+   -- Output signals to / from DUT
+   signal bcd_input_vector : std_logic_vector(7 downto 0);
+   signal bcd_valid_in     : std_logic;
+   signal bcd_ready        : std_logic;
+   signal bcd_0            : std_logic_vector(3 downto 0);
+   signal bcd_1            : std_logic_vector(3 downto 0);
+   signal bcd_2            : std_logic_vector(3 downto 0);
+   signal bcd_0_int        : integer range 0 to 15;
+   signal bcd_1_int        : integer range 0 to 15;
+   signal bcd_2_int        : integer range 0 to 15;
+   signal bcd_total        : integer;
+   signal bcd_valid_out    : std_logic;
 
    procedure pr_write(v_input_str : in string) is
       variable v_line : line;
@@ -38,11 +38,11 @@ architecture bhv of testbench_top is
 
 begin
 
-   bcd_0_int   <= to_integer(unsigned(bcd_0));
-   bcd_1_int   <= to_integer(unsigned(bcd_1));
-   bcd_2_int   <= to_integer(unsigned(bcd_2));
+   bcd_0_int <= to_integer(unsigned(bcd_0));
+   bcd_1_int <= to_integer(unsigned(bcd_1));
+   bcd_2_int <= to_integer(unsigned(bcd_2));
 
-   bcd_total   <= bcd_2_int*100 + bcd_1_int*10 + bcd_0_int;
+   bcd_total <= bcd_2_int*100 + bcd_1_int*10 + bcd_0_int;
 
    --=============================================================
    -- p_generate_clock
@@ -87,10 +87,10 @@ begin
    begin
 
       -- Startup values
-      kill_clock           <= '0';
-      bcd_input_vector     <= (others => '0');
-      bcd_valid_in         <= '0';
-      errors_found         <= 0;
+      kill_clock       <= '0';
+      bcd_input_vector <= (others => '0');
+      bcd_valid_in     <= '0';
+      errors_found     <= 0;
       pr_write("Simulation starts.");
 
       -- wait until reset is released
@@ -131,19 +131,19 @@ begin
 
    i_dut_bcd_decode : entity work.bcd_decode_rom
    port map(
-      clk                     => clock_50,
-      reset                   => reset,   -- active high reset
+      clk          => clock_50,
+      reset        => reset,   -- active high reset
 
       -- input data interface
-      input_vector            => bcd_input_vector, -- in  std_logic_vector(7 downto 0)
-      valid_in                => bcd_valid_in,     -- in  std_logic
-      ready                   => bcd_ready,        -- out std_logic
+      input_vector => bcd_input_vector, -- in  std_logic_vector(7 downto 0)
+      valid_in     => bcd_valid_in,     -- in  std_logic
+      ready        => bcd_ready,        -- out std_logic
 
       -- output result
-      bcd_0                   => bcd_0,            -- out std_logic_vector(3 downto 0) ones
-      bcd_1                   => bcd_1,            -- out std_logic_vector(3 downto 0) tens
-      bcd_2                   => bcd_2,            -- out std_logic_vector(3 downto 0) hundreds
-      valid_out               => bcd_valid_out);   -- out std_logic, Set high one clock cycle when bcd* is valid
+      bcd_0        => bcd_0,            -- out std_logic_vector(3 downto 0) ones
+      bcd_1        => bcd_1,            -- out std_logic_vector(3 downto 0) tens
+      bcd_2        => bcd_2,            -- out std_logic_vector(3 downto 0) hundreds
+      valid_out    => bcd_valid_out);   -- out std_logic, Set high one clock cycle when bcd* is valid
 
 
 
