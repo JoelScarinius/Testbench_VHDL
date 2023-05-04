@@ -9,7 +9,7 @@ end entity testbench_top;
 
 architecture bhv of testbench_top is
    -- Constants
-   constant c_natural_counter_max : integer := 255;
+   constant c_cnt_max : integer := 255;
 
    -- Clock and reset generation
    signal clock_50     : std_logic := '0';
@@ -31,7 +31,7 @@ architecture bhv of testbench_top is
    signal bcd_total        : integer;
    signal bcd_valid_out    : std_logic;
 
-   signal counter          : integer range 0 to c_natural_counter_max;
+   signal cnt          : integer range 0 to c_cnt_max;
 
    procedure pr_write(v_input_str : in string) is
       variable v_line : line;
@@ -104,8 +104,8 @@ begin
       -- wait for clock signal to go high
       wait until clock_50 = '1';
       
-      for counter in 0 to 255 loop
-         bcd_input_vector        <= std_logic_vector(to_unsigned(counter,bcd_input_vector'length));
+      for cnt in 0 to c_cnt_max loop
+         bcd_input_vector        <= std_logic_vector(to_unsigned(cnt,bcd_input_vector'length));
          wait until clock_50 = '1';
          bcd_valid_in            <= '1';
          wait until clock_50 = '1';
@@ -113,8 +113,8 @@ begin
          while bcd_valid_out /= '1' loop
             wait for 1 ns;
          end loop;
-         if bcd_total /= counter then
-            pr_write("ERROR - Input : " & integer'image(counter) & " resulted in output : " & integer'image(bcd_total));
+         if bcd_total /= cnt then
+            pr_write("ERROR - Input : " & integer'image(cnt) & " resulted in output : " & integer'image(bcd_total));
             errors_found            <= errors_found + 1;
          end if;
          wait for 1 ns;
