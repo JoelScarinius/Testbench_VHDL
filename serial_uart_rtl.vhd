@@ -126,18 +126,7 @@ begin
                   counting_state <= s_not_counting;
                end if;
          end case;
-
-         -- if ((rx_state = s_idle) and (rx_2r = '0')) then
-         --    -- increment start_bit_cnt
-         --    start_bit_cnt <= start_bit_cnt + 1;
-         --    -- reset start_bit_cnt when it reaches c_start_bit_cnt_max
-         --    if (start_bit_cnt = c_start_bit_cnt_max) then
-         --       start_bit_cnt <= 0;
-         --    end if;
-         -- else
-         --    -- when finished counting, output this value to serial_uart_test_port
-         --    serial_uart_test_port(11 downto 0) <= std_logic_vector(to_unsigned(start_bit_cnt*2, 12));
-         -- end if;
+         
       end if;
    end process p_detect_start_bit;
 
